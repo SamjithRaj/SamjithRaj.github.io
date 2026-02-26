@@ -1,138 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samjith Raj Bondla | Software Engineer</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samjith Raj Bondla | Software Engineer</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
-<body class="dark-mode">
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">SRB<span>.</span></a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
+
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="#" class="logo">SRB<span>.</span></a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#github">GitHub</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<header class="hero section">
+    <div class="container hero-grid">
+        <div class="hero-text">
+            <span class="badge">Open to SDE / Backend Roles</span>
+            <h1>Samjith Raj Bondla</h1>
+            <p class="subtitle">B.Tech CSE (AI & ML) • CGPA 8.4</p>
+            <p class="description">
+                Backend-focused Software Engineer building high-performance systems in C++ 
+                and scalable REST applications in Python. Passionate about 
+                concurrency, low-latency architecture, and clean system design.
+            </p>
+
+            <div class="hero-cta">
+                <a href="Samjith-Resume-2026.pdf" target="_blank" class="btn btn-primary">
+                    Download Resume <i class="fas fa-download"></i>
+                </a>
+
+                <div class="social-icons">
+                    <a href="https://github.com/SamjithRaj" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/samjith-raj-bondla" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="image-wrapper">
+                <img src="headshot.png" alt="Samjith Raj Bondla">
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="about" class="section">
+    <div class="container">
+        <h2 class="section-title">About</h2>
+        <p class="about-text">
+            I enjoy working close to the fundamentals — implementing in-memory databases,
+            designing thread-safe systems, and solving complex algorithmic problems.
+            Currently building a Redis-like key-value store and multi-threaded caching systems in C++.
+        </p>
+    </div>
+</section>
+
+<section id="experience" class="section">
+    <div class="container">
+        <h2 class="section-title">Experience</h2>
+
+        <div class="timeline-card">
+            <div class="card-header">
+                <h3>Project Manager</h3>
+                <span class="date">Feb 2026 – Present</span>
+            </div>
+            <p class="org">Raw Canvas (Remote)</p>
+            <ul>
+                <li>Directed 50+ digital campaigns with 100% on-time delivery.</li>
+                <li>Improved turnaround time by 25% using workflow optimization.</li>
             </ul>
         </div>
-    </nav>
 
-    <header class="hero section">
-        <div class="container hero-grid">
-            <div class="hero-text">
-                <span class="badge">Available for SDE Roles</span>
-                <h1>Samjith Raj Bondla</h1>
-                <p class="subtitle">B.Tech CSE (AI & ML) @ Vignan Institute [cite: 165]</p>
-                <p class="description">
-                    Aspiring Software Engineer focused on high-performance systems and AI. Currently directing 50+ digital campaigns at Raw Canvas [cite: 176, 179] and building low-latency C++ applications[cite: 190].
-                </p>
-                <div class="hero-cta">
-                    <a href="Samjith-Resume-2026.pdf" target="_blank" class="btn btn-primary">Download Resume <i class="fas fa-download"></i></a>
-                    <div class="social-icons">
-                        <a href="https://github.com/SamjithRaj" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://linkedin.com/in/samjith-raj-bondla" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
+        <div class="timeline-card">
+            <div class="card-header">
+                <h3>Member Board (Outgoing Volunteer)</h3>
+                <span class="date">Feb 2025 – Apr 2025</span>
             </div>
-            <div class="hero-visual">
-                <div class="image-wrapper">
-                    <img src="headshot.png" alt="Samjith Raj Bondla">
+            <p class="org">AIESEC Hyderabad</p>
+            <ul>
+                <li>Facilitated international exchange for 15+ candidates with 100% success rate.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="section">
+    <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+
+        <div class="project-grid">
+
+            <div class="project-card">
+                <h3>Mini Redis — In-Memory Key-Value Store</h3>
+                <p>High-performance C++ database with O(1) retrieval, thread-safe concurrency and persistence.</p>
+                <div class="tags">
+                    <span>C++</span><span>Concurrency</span><span>STL</span>
                 </div>
+                <a href="https://github.com/SamjithRaj" target="_blank" class="project-link">
+                    View Code →
+                </a>
+            </div>
+
+            <div class="project-card">
+                <h3>LRU Cache System</h3>
+                <p>Constant-time LRU cache using hash tables and doubly linked lists, extended for multi-threading.</p>
+                <div class="tags">
+                    <span>C++</span><span>Algorithms</span><span>Multi-threading</span>
+                </div>
+                <a href="https://github.com/SamjithRaj" target="_blank" class="project-link">
+                    View Code →
+                </a>
+            </div>
+
+            <div class="project-card">
+                <h3>The Giving Plate</h3>
+                <p>Full-stack Flask platform connecting food suppliers with communities via REST APIs.</p>
+                <div class="tags">
+                    <span>Flask</span><span>Firebase</span><span>REST APIs</span>
+                </div>
+                <a href="https://github.com/SamjithRaj" target="_blank" class="project-link">
+                    View Code →
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="github" class="section">
+    <div class="container">
+        <h2 class="section-title">GitHub Contributions</h2>
+        <div class="github-heatmap-container">
+            <img src="https://ghchart.rshah.org/0088CC/SamjithRaj" alt="GitHub Heatmap">
+        </div>
+    </div>
+</section>
+
+<section id="skills" class="section">
+    <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-wrapper">
+            <div class="skill-group">
+                <h4>Languages</h4>
+                <p>C++, Python, SQL, JavaScript, HTML/CSS, STL</p>
+            </div>
+            <div class="skill-group">
+                <h4>Tools & Frameworks</h4>
+                <p>Flask, REST, Firebase, MySQL, PostgreSQL, Git, GitHub</p>
+            </div>
+            <div class="skill-group">
+                <h4>Core Domains</h4>
+                <p>Data Structures, OOP, Multi-threading, Synchronization</p>
             </div>
         </div>
-    </header>
+    </div>
+</section>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">GitHub Contributions</h2>
-            <div class="github-heatmap-container">
-                <img src="https://ghchart.rshah.org/0088CC/SamjithRaj" alt="Github Heatmap" />
-            </div>
-        </div>
-    </section>
+<footer class="footer" id="contact">
+    <p>reachsamjith@gmail.com</p>
+    <p>© 2026 Samjith Raj Bondla — Built for performance.</p>
+</footer>
 
-    <section id="experience" class="section">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="timeline">
-                <div class="timeline-card">
-                    <div class="card-header">
-                        <h3>Project Manager</h3>
-                        <span class="date">Feb 2026 – Present [cite: 176, 178]</span>
-                    </div>
-                    <p class="org">Raw Canvas [cite: 177]</p>
-                    <ul>
-                        <li>Directing 50+ digital marketing campaigns with 100% on-time delivery across major social platforms[cite: 179].</li>
-                        <li>Improved team turnaround time by 25% through workflow optimization in Notion and Slack[cite: 180].</li>
-                    </ul>
-                </div>
-                <div class="timeline-card">
-                    <div class="card-header">
-                        <h3>Member Board (Outgoing Volunteer)</h3>
-                        <span class="date">Feb 2025 – Apr 2025 [cite: 181, 185]</span>
-                    </div>
-                    <p class="org">AIESEC [cite: 182]</p>
-                    <ul>
-                        <li>Facilitated international exchange for 15+ candidates with a 100% success rate[cite: 186].</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="section">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>Mini Redis </h3>
-                    <p>High-performance C++ In-Memory Key-Value Store with $O(1)$ retrieval[cite: 189, 190]. Implemented thread-safe concurrency and persistent storage[cite: 191].</p>
-                    <div class="tags"><span>C++</span> <span>Concurrency</span> <span>STL</span> [cite: 199]</div>
-                </div>
-                <div class="project-card">
-                    <h3>The Giving Plate [cite: 192]</h3>
-                    <p>Full-stack food redistribution platform connecting suppliers with underprivileged communities[cite: 193, 194].</p>
-                    <div class="tags"><span>Flask</span> <span>Firebase</span> <span>REST APIs</span> [cite: 199, 200]</div>
-                </div>
-                <div class="project-card">
-                    <h3>LRU Cache System [cite: 195]</h3>
-                    <p>C++ Least-Recently-Used caching technique using hash tables for constant-time performance in multi-threaded environments[cite: 196, 197].</p>
-                    <div class="tags"><span>C++</span> <span>Algorithms</span> <span>Multi-threading</span> [cite: 199, 201]</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="section">
-        <div class="container">
-            <h2 class="section-title">Skills & Expertise</h2>
-            <div class="skills-wrapper">
-                <div class="skill-group">
-                    <h4>Languages</h4>
-                    <p>C++, Python, SQL, JavaScript, HTML/CSS, STL [cite: 199]</p>
-                </div>
-                <div class="skill-group">
-                    <h4>Tools & Frameworks</h4>
-                    <p>Flask, REST, Firebase, MySQL, PostgreSQL, Git, GitHub, VS Code [cite: 200]</p>
-                </div>
-                <div class="skill-group">
-                    <h4>Domains</h4>
-                    <p>DSA, OOP, Multi-threading, Synchronization, Agile [cite: 201]</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <p>&copy; 2026 Samjith Raj Bondla. Built for performance.</p>
-    </footer>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
