@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Samjith Raj Bondla | Software Engineer</title>
-<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<link rel="icon" href="favicon.ico">
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -17,10 +18,8 @@
         <a href="#" class="logo">SRB<span>.</span></a>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#github">GitHub</a></li>
-            <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
@@ -29,18 +28,21 @@
 <header class="hero section">
     <div class="container hero-grid">
         <div class="hero-text">
-            <span class="badge">Open to SDE / Backend Roles</span>
-            <h1>Samjith Raj Bondla</h1>
-            <p class="subtitle">B.Tech CSE (AI & ML) • CGPA 8.4</p>
+            <span class="badge">Building systems that don’t break.</span>
+            <h1>Hi, I’m Samjith.</h1>
+
+            <h2 class="typing-line">
+                <span id="typing-text"></span><span class="cursor">|</span>
+            </h2>
+
             <p class="description">
-                Backend-focused Software Engineer building high-performance systems in C++ 
-                and scalable REST applications in Python. Passionate about 
-                concurrency, low-latency architecture, and clean system design.
+                I build high-performance backend systems in C++ and scalable APIs in Python.
+                I care about latency, memory, and architecture.
             </p>
 
             <div class="hero-cta">
                 <a href="Samjith-Resume-2026.pdf" target="_blank" class="btn btn-primary">
-                    Download Resume <i class="fas fa-download"></i>
+                    Download Resume
                 </a>
 
                 <div class="social-icons">
@@ -56,87 +58,53 @@
             </div>
         </div>
     </div>
+
+    <!-- Floating Tech Badges -->
+    <div class="floating-badge badge-1">C++</div>
+    <div class="floating-badge badge-2">Concurrency</div>
+    <div class="floating-badge badge-3">REST APIs</div>
+    <div class="floating-badge badge-4">DSA</div>
 </header>
 
 <section id="about" class="section">
     <div class="container">
         <h2 class="section-title">About</h2>
         <p class="about-text">
-            I enjoy working close to the fundamentals — implementing in-memory databases,
-            designing thread-safe systems, and solving complex algorithmic problems.
-            Currently building a Redis-like key-value store and multi-threaded caching systems in C++.
+            I enjoy working close to the fundamentals — in-memory databases,
+            multi-threaded systems, and performance engineering.
+            Currently building a Redis-like key-value store in C++.
         </p>
-    </div>
-</section>
-
-<section id="experience" class="section">
-    <div class="container">
-        <h2 class="section-title">Experience</h2>
-
-        <div class="timeline-card">
-            <div class="card-header">
-                <h3>Project Manager</h3>
-                <span class="date">Feb 2026 – Present</span>
-            </div>
-            <p class="org">Raw Canvas (Remote)</p>
-            <ul>
-                <li>Directed 50+ digital campaigns with 100% on-time delivery.</li>
-                <li>Improved turnaround time by 25% using workflow optimization.</li>
-            </ul>
-        </div>
-
-        <div class="timeline-card">
-            <div class="card-header">
-                <h3>Member Board (Outgoing Volunteer)</h3>
-                <span class="date">Feb 2025 – Apr 2025</span>
-            </div>
-            <p class="org">AIESEC Hyderabad</p>
-            <ul>
-                <li>Facilitated international exchange for 15+ candidates with 100% success rate.</li>
-            </ul>
-        </div>
     </div>
 </section>
 
 <section id="projects" class="section">
     <div class="container">
-        <h2 class="section-title">Featured Projects</h2>
+        <h2 class="section-title">Projects</h2>
 
         <div class="project-grid">
-
             <div class="project-card">
-                <h3>Mini Redis — In-Memory Key-Value Store</h3>
-                <p>High-performance C++ database with O(1) retrieval, thread-safe concurrency and persistence.</p>
+                <h3>Mini Redis</h3>
+                <p>Thread-safe in-memory database with O(1) retrieval.</p>
                 <div class="tags">
-                    <span>C++</span><span>Concurrency</span><span>STL</span>
+                    <span>C++</span><span>Concurrency</span>
                 </div>
-                <a href="https://github.com/SamjithRaj" target="_blank" class="project-link">
-                    View Code →
-                </a>
             </div>
 
             <div class="project-card">
-                <h3>LRU Cache System</h3>
-                <p>Constant-time LRU cache using hash tables and doubly linked lists, extended for multi-threading.</p>
+                <h3>LRU Cache</h3>
+                <p>Constant-time cache using hash table + doubly linked list.</p>
                 <div class="tags">
-                    <span>C++</span><span>Algorithms</span><span>Multi-threading</span>
+                    <span>C++</span><span>Algorithms</span>
                 </div>
-                <a href="https://github.com/SamjithRaj" target="_blank" class="project-link">
-                    View Code →
-                </a>
             </div>
 
             <div class="project-card">
                 <h3>The Giving Plate</h3>
-                <p>Full-stack Flask platform connecting food suppliers with communities via REST APIs.</p>
+                <p>Full-stack Flask platform with Firebase auth.</p>
                 <div class="tags">
-                    <span>Flask</span><span>Firebase</span><span>REST APIs</span>
+                    <span>Python</span><span>Flask</span>
                 </div>
-                <a href="https://github.com/SamjithRaj" target="_blank" class="project-link">
-                    View Code →
-                </a>
             </div>
-
         </div>
     </div>
 </section>
@@ -150,30 +118,19 @@
     </div>
 </section>
 
-<section id="skills" class="section">
-    <div class="container">
-        <h2 class="section-title">Skills</h2>
-        <div class="skills-wrapper">
-            <div class="skill-group">
-                <h4>Languages</h4>
-                <p>C++, Python, SQL, JavaScript, HTML/CSS, STL</p>
-            </div>
-            <div class="skill-group">
-                <h4>Tools & Frameworks</h4>
-                <p>Flask, REST, Firebase, MySQL, PostgreSQL, Git, GitHub</p>
-            </div>
-            <div class="skill-group">
-                <h4>Core Domains</h4>
-                <p>Data Structures, OOP, Multi-threading, Synchronization</p>
-            </div>
-        </div>
-    </div>
-</section>
-
 <footer class="footer" id="contact">
     <p>reachsamjith@gmail.com</p>
     <p>© 2026 Samjith Raj Bondla — Built for performance.</p>
 </footer>
+
+<!-- Hidden Easter Egg Terminal -->
+<div id="easter-egg">
+    <div class="terminal">
+        <p>> Access Granted.</p>
+        <p>> Systems Engineer Mode Activated.</p>
+        <p>> Keep building. Keep shipping.</p>
+    </div>
+</div>
 
 <script src="script.js"></script>
 </body>
