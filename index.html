@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Samjith Raj Bondla | Software Engineer</title>
+<title>Samjith Raj Bondla | Systems Engineer</title>
 
 <link rel="icon" href="favicon.ico">
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
 
 <nav class="navbar">
-    <div class="nav-container">
-        <a href="#" class="logo">SRB<span>.</span></a>
+    <div class="container nav-container">
+        <div class="logo">SRB<span>.</span></div>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -25,111 +25,126 @@
     </div>
 </nav>
 
-<header class="hero section">
+<header class="hero">
     <div class="container hero-grid">
-        <div class="hero-text">
-            <span class="badge">Building systems that don’t break.</span>
+
+        <div class="hero-left">
+            <p class="hero-eyebrow">Systems • Concurrency • Performance</p>
             <h1>Hi, I’m Samjith.</h1>
 
             <h2 class="typing-line">
                 <span id="typing-text"></span><span class="cursor">|</span>
             </h2>
 
-            <p class="description">
-                I build high-performance backend systems in C++ and scalable APIs in Python.
-                I care about latency, memory, and architecture.
+            <p class="hero-description">
+                I design systems that prioritize speed, correctness, and scale.
+                Currently building a Redis-like in-memory database in C++ and
+                experimenting with multi-threaded architectures.
             </p>
 
-            <div class="hero-cta">
-                <a href="Samjith-Resume-2026.pdf" target="_blank" class="btn btn-primary">
+            <div class="hero-actions">
+                <a href="Samjith-Resume-2026.pdf" target="_blank" class="btn-primary">
                     Download Resume
                 </a>
 
-                <div class="social-icons">
-                    <a href="https://github.com/SamjithRaj" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/samjith-raj-bondla" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <div class="socials">
+                    <a href="https://github.com/SamjithRaj" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/samjith-raj-bondla" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
                 </div>
             </div>
         </div>
 
-        <div class="hero-visual">
-            <div class="image-wrapper">
-                <img src="headshot.png" alt="Samjith Raj Bondla">
-            </div>
+        <div class="hero-right">
+            <img src="headshot.png" alt="Samjith Raj">
         </div>
+
     </div>
 
-    <!-- Floating Tech Badges -->
-    <div class="floating-badge badge-1">C++</div>
-    <div class="floating-badge badge-2">Concurrency</div>
-    <div class="floating-badge badge-3">REST APIs</div>
-    <div class="floating-badge badge-4">DSA</div>
+    <!-- Floating tech accents -->
+    <div class="tech-orb orb-1">C++</div>
+    <div class="tech-orb orb-2">Concurrency</div>
+    <div class="tech-orb orb-3">REST APIs</div>
 </header>
 
 <section id="about" class="section">
-    <div class="container">
-        <h2 class="section-title">About</h2>
-        <p class="about-text">
-            I enjoy working close to the fundamentals — in-memory databases,
-            multi-threaded systems, and performance engineering.
-            Currently building a Redis-like key-value store in C++.
+    <div class="container narrow">
+        <h3 class="section-title">About</h3>
+        <p>
+            I enjoy working close to the fundamentals — memory models, synchronization,
+            and performance optimization. I prefer systems that fail loudly instead of silently.
+            My focus is backend engineering and building components that are predictable under load.
         </p>
     </div>
 </section>
 
 <section id="projects" class="section">
     <div class="container">
-        <h2 class="section-title">Projects</h2>
+        <h3 class="section-title">Projects</h3>
 
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>Mini Redis</h3>
-                <p>Thread-safe in-memory database with O(1) retrieval.</p>
+        <div class="cards">
+
+            <div class="card">
+                <h4>Mini Redis — In-Memory Key-Value Store</h4>
+                <p>
+                    Built a Redis-like database in C++ supporting O(1) retrieval,
+                    mutex-based synchronization, and persistent snapshot storage.
+                </p>
                 <div class="tags">
-                    <span>C++</span><span>Concurrency</span>
+                    <span>C++</span><span>Concurrency</span><span>STL</span>
                 </div>
             </div>
 
-            <div class="project-card">
-                <h3>LRU Cache</h3>
-                <p>Constant-time cache using hash table + doubly linked list.</p>
+            <div class="card">
+                <h4>LRU Cache — Constant Time Eviction</h4>
+                <p>
+                    Implemented an O(1) LRU cache using hash maps + doubly linked lists,
+                    extended to support thread-safe operations.
+                </p>
                 <div class="tags">
-                    <span>C++</span><span>Algorithms</span>
+                    <span>C++</span><span>Data Structures</span>
                 </div>
             </div>
 
-            <div class="project-card">
-                <h3>The Giving Plate</h3>
-                <p>Full-stack Flask platform with Firebase auth.</p>
+            <div class="card">
+                <h4>The Giving Plate — Full Stack Platform</h4>
+                <p>
+                    Flask-based REST application with Firebase authentication
+                    connecting food suppliers to communities.
+                </p>
                 <div class="tags">
-                    <span>Python</span><span>Flask</span>
+                    <span>Python</span><span>Flask</span><span>REST</span>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
 
 <section id="github" class="section">
     <div class="container">
-        <h2 class="section-title">GitHub Contributions</h2>
-        <div class="github-heatmap-container">
-            <img src="https://ghchart.rshah.org/0088CC/SamjithRaj" alt="GitHub Heatmap">
+        <h3 class="section-title">GitHub Activity</h3>
+        <div class="github-box">
+            <img src="https://ghchart.rshah.org/00aaff/SamjithRaj" alt="GitHub Heatmap">
         </div>
     </div>
 </section>
 
-<footer class="footer" id="contact">
-    <p>reachsamjith@gmail.com</p>
-    <p>© 2026 Samjith Raj Bondla — Built for performance.</p>
+<footer id="contact">
+    <div class="container footer">
+        <p>reachsamjith@gmail.com</p>
+        <p>© 2026 Samjith Raj Bondla — Built with intent.</p>
+    </div>
 </footer>
 
-<!-- Hidden Easter Egg Terminal -->
-<div id="easter-egg">
-    <div class="terminal">
-        <p>> Access Granted.</p>
-        <p>> Systems Engineer Mode Activated.</p>
-        <p>> Keep building. Keep shipping.</p>
-    </div>
+<!-- Hidden Easter Egg -->
+<div id="terminal">
+    <p>> engineer_mode --activate</p>
+    <p>> systems_ready = true</p>
+    <p>> keep_building();</p>
 </div>
 
 <script src="script.js"></script>
