@@ -1,47 +1,46 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    /* Typing Animation */
     const phrases = [
         "Backend Systems Engineer.",
         "C++ Performance Builder.",
-        "Concurrency Enthusiast.",
+        "Concurrency & Architecture Focused.",
         "I build things that scale."
     ];
 
-    const typingElement = document.getElementById("typing-text");
+    const typing = document.getElementById("typing-text");
 
     let phraseIndex = 0;
     let letterIndex = 0;
-    let isDeleting = false;
+    let deleting = false;
 
-    function typeEffect() {
-        const currentPhrase = phrases[phraseIndex];
+    function type() {
+        const current = phrases[phraseIndex];
 
-        if (!isDeleting) {
-            typingElement.textContent = currentPhrase.substring(0, letterIndex + 1);
+        if (!deleting) {
+            typing.textContent = current.substring(0, letterIndex + 1);
             letterIndex++;
-            if (letterIndex === currentPhrase.length) {
-                setTimeout(() => isDeleting = true, 1000);
+            if (letterIndex === current.length) {
+                setTimeout(() => deleting = true, 1000);
             }
         } else {
-            typingElement.textContent = currentPhrase.substring(0, letterIndex - 1);
+            typing.textContent = current.substring(0, letterIndex - 1);
             letterIndex--;
             if (letterIndex === 0) {
-                isDeleting = false;
+                deleting = false;
                 phraseIndex = (phraseIndex + 1) % phrases.length;
             }
         }
 
-        setTimeout(typeEffect, isDeleting ? 40 : 70);
+        setTimeout(type, deleting ? 40 : 70);
     }
 
-    typeEffect();
+    type();
 
-    /* Hidden Easter Egg (Press Ctrl + Shift + S) */
     document.addEventListener("keydown", function(e) {
         if (e.ctrlKey && e.shiftKey && e.key === "S") {
-            const egg = document.getElementById("easter-egg");
-            egg.style.display = egg.style.display === "block" ? "none" : "block";
+            const terminal = document.getElementById("terminal");
+            terminal.style.display =
+                terminal.style.display === "block" ? "none" : "block";
         }
     });
 
