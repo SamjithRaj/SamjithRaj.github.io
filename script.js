@@ -1,52 +1,47 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    /* ---------- SMOOTH SCROLL ---------- */
+    /* Typing Animation */
+    const phrases = [
+        "Backend Systems Engineer.",
+        "C++ Performance Builder.",
+        "Concurrency Enthusiast.",
+        "I build things that scale."
+    ];
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+    const typingElement = document.getElementById("typing-text");
 
-            const target = document.querySelector(this.getAttribute('href'));
+    let phraseIndex = 0;
+    let letterIndex = 0;
+    let isDeleting = false;
 
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
+    function typeEffect() {
+        const currentPhrase = phrases[phraseIndex];
+
+        if (!isDeleting) {
+            typingElement.textContent = currentPhrase.substring(0, letterIndex + 1);
+            letterIndex++;
+            if (letterIndex === currentPhrase.length) {
+                setTimeout(() => isDeleting = true, 1000);
             }
-        });
-    });
-
-    /* ---------- SCROLL REVEAL ANIMATION ---------- */
-
-    const observerOptions = {
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = "1";
-                entry.target.style.transform = "translateY(0)";
-            }
-        });
-    }, observerOptions);
-
-    document.querySelectorAll('.section').forEach(section => {
-        section.style.opacity = "0";
-        section.style.transform = "translateY(40px)";
-        section.style.transition = "all 0.8s ease";
-        observer.observe(section);
-    });
-
-    /* ---------- NAVBAR SHADOW ON SCROLL ---------- */
-
-    const navbar = document.querySelector('.navbar');
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 40) {
-            navbar.style.boxShadow = "0 8px 25px rgba(0,0,0,0.5)";
         } else {
-            navbar.style.boxShadow = "none";
+            typingElement.textContent = currentPhrase.substring(0, letterIndex - 1);
+            letterIndex--;
+            if (letterIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+            }
+        }
+
+        setTimeout(typeEffect, isDeleting ? 40 : 70);
+    }
+
+    typeEffect();
+
+    /* Hidden Easter Egg (Press Ctrl + Shift + S) */
+    document.addEventListener("keydown", function(e) {
+        if (e.ctrlKey && e.shiftKey && e.key === "S") {
+            const egg = document.getElementById("easter-egg");
+            egg.style.display = egg.style.display === "block" ? "none" : "block";
         }
     });
 
