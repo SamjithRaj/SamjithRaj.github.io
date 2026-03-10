@@ -1,152 +1,295 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Samjith Raj Bondla | Systems Engineer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samjith Raj Bondla | Systems Engineer</title>
 
-<link rel="icon" href="favicon.ico">
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="icon" href="favicon.ico">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<nav class="navbar">
-    <div class="container nav-container">
-        <div class="logo">SRB<span>.</span></div>
+  <!-- ── NAVBAR ──────────────────────────────────────────────── -->
+  <nav>
+    <div class="nav-inner">
+      <div class="logo">SRB<em>.</em></div>
+      <div class="nav-right">
         <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#github">GitHub</a></li>
-            <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#github">GitHub</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
+        <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-sun sun-icon"></i>
+          <i class="fas fa-moon moon-icon"></i>
+        </button>
+      </div>
     </div>
-</nav>
+  </nav>
 
-<header class="hero">
-    <div class="container hero-grid">
+
+  <!-- ── HERO ────────────────────────────────────────────────── -->
+  <header class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
 
         <div class="hero-left">
-            <p class="hero-eyebrow">Systems • Concurrency • Performance</p>
-            <h1>Hi, I’m Samjith.</h1>
-
-            <h2 class="typing-line">
-                <span id="typing-text"></span><span class="cursor">|</span>
-            </h2>
-
-            <p class="hero-description">
-                I design systems that prioritize speed, correctness, and scale.
-                Currently building a Redis-like in-memory database in C++ and
-                experimenting with multi-threaded architectures.
-            </p>
-
-            <div class="hero-actions">
-                <a href="Samjith-Resume-2026.pdf" target="_blank" class="btn-primary">
-                    Download Resume
-                </a>
-
-                <div class="socials">
-                    <a href="https://github.com/SamjithRaj" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://linkedin.com/in/samjith-raj-bondla" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </div>
+          <div class="hero-eyebrow">
+            <span class="dot-pulse"></span>
+            Systems &nbsp;·&nbsp; Concurrency &nbsp;·&nbsp; Performance
+          </div>
+          <h1 class="hero-name">Hi, I'm Samjith.</h1>
+          <div class="typing-wrap">
+            <span id="typing-text"></span><span class="cursor"></span>
+          </div>
+          <p class="hero-desc">
+            I design systems that prioritize speed, correctness, and scale.
+            Currently building a Redis-like in-memory database in C++ and
+            experimenting with multi-threaded architectures.
+          </p>
+          <div class="hero-actions">
+            <a href="Samjith-Resume-2026.pdf" target="_blank" class="btn-primary">
+              <i class="fas fa-download"></i> Resume
+            </a>
+            <a href="https://github.com/SamjithRaj" target="_blank" class="btn-ghost">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <div class="socials">
+              <a href="https://linkedin.com/in/samjith-raj-bondla" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="mailto:reachsamjith@gmail.com" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+              </a>
             </div>
+          </div>
         </div>
 
-        <div class="hero-right">
-            <img src="headshot.png" alt="Samjith Raj">
+        <div class="hero-photo">
+          <div class="photo-frame">
+            <img src="headshot.png" alt="Samjith Raj Bondla">
+            <div class="photo-chip">
+              Open to opportunities
+              <strong>Systems Engineer</strong>
+            </div>
+          </div>
         </div>
 
+      </div>
     </div>
+  </header>
 
-    <!-- Floating tech accents -->
-    <div class="tech-orb orb-1">C++</div>
-    <div class="tech-orb orb-2">Concurrency</div>
-    <div class="tech-orb orb-3">REST APIs</div>
-</header>
 
-<section id="about" class="section">
-    <div class="container narrow">
-        <h3 class="section-title">About</h3>
-        <p>
-            I enjoy working close to the fundamentals — memory models, synchronization,
-            and performance optimization. I prefer systems that fail loudly instead of silently.
-            My focus is backend engineering and building components that are predictable under load.
-        </p>
-    </div>
-</section>
+  <!-- ── ABOUT ───────────────────────────────────────────────── -->
+  <section id="about">
+    <div class="wrap">
 
-<section id="projects" class="section">
-    <div class="container">
-        <h3 class="section-title">Projects</h3>
+      <div class="section-header reveal">
+        <div class="section-tag">01 — About</div>
+        <h2>A bit about me</h2>
+      </div>
 
-        <div class="cards">
-
-            <div class="card">
-                <h4>Mini Redis — In-Memory Key-Value Store</h4>
-                <p>
-                    Built a Redis-like database in C++ supporting O(1) retrieval,
-                    mutex-based synchronization, and persistent snapshot storage.
-                </p>
-                <div class="tags">
-                    <span>C++</span><span>Concurrency</span><span>STL</span>
-                </div>
-            </div>
-
-            <div class="card">
-                <h4>LRU Cache — Constant Time Eviction</h4>
-                <p>
-                    Implemented an O(1) LRU cache using hash maps + doubly linked lists,
-                    extended to support thread-safe operations.
-                </p>
-                <div class="tags">
-                    <span>C++</span><span>Data Structures</span>
-                </div>
-            </div>
-
-            <div class="card">
-                <h4>The Giving Plate — Full Stack Platform</h4>
-                <p>
-                    Flask-based REST application with Firebase authentication
-                    connecting food suppliers to communities.
-                </p>
-                <div class="tags">
-                    <span>Python</span><span>Flask</span><span>REST</span>
-                </div>
-            </div>
-
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I enjoy working close to the fundamentals — <strong>memory models</strong>,
+            synchronization primitives, and performance optimization. I prefer systems
+            that fail loudly instead of silently.
+          </p>
+          <p>
+            My focus is backend engineering: building components that are <strong>predictable
+            under load</strong>, easy to reason about, and correct by design. I gravitate
+            toward low-level abstractions because they reveal what the machine is actually doing.
+          </p>
+          <p>
+            Outside of code I think about distributed systems tradeoffs, latency budgets,
+            and writing software that future maintainers will genuinely appreciate.
+          </p>
         </div>
-    </div>
-</section>
 
-<section id="github" class="section">
-    <div class="container">
-        <h3 class="section-title">GitHub Activity</h3>
-        <div class="github-box">
-            <img src="https://ghchart.rshah.org/00aaff/SamjithRaj" alt="GitHub Heatmap">
+        <div class="skills-col reveal">
+          <h4>Languages</h4>
+          <div class="pill-row">
+            <span class="pill">C++17</span>
+            <span class="pill">Python</span>
+            <span class="pill">SQL</span>
+            <span class="pill">Bash</span>
+          </div>
+
+          <h4>Tools &amp; Concepts</h4>
+          <div class="pill-row">
+            <span class="pill">std::thread</span>
+            <span class="pill">Mutex / RW-Locks</span>
+            <span class="pill">REST APIs</span>
+            <span class="pill">Flask</span>
+            <span class="pill">Firebase</span>
+            <span class="pill">Linux</span>
+            <span class="pill">Git</span>
+            <span class="pill">Docker</span>
+          </div>
+
+          <h4>Focus Areas</h4>
+          <div class="pill-row">
+            <span class="pill">Concurrency</span>
+            <span class="pill">Memory Management</span>
+            <span class="pill">Data Structures</span>
+            <span class="pill">Performance</span>
+          </div>
         </div>
+      </div>
+
     </div>
-</section>
+  </section>
 
-<footer id="contact">
-    <div class="container footer">
-        <p>reachsamjith@gmail.com</p>
-        <p>© 2026 Samjith Raj Bondla — Built with intent.</p>
+
+  <!-- ── PROJECTS ────────────────────────────────────────────── -->
+  <section id="projects">
+    <div class="wrap">
+
+      <div class="section-header reveal">
+        <div class="section-tag">02 — Projects</div>
+        <h2>Things I've built</h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <div class="project-card reveal">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-database"></i></div>
+            <a href="https://github.com/SamjithRaj/Mini-Redis" target="_blank" class="card-link" title="View on GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <h3>Mini Redis — In-Memory Key-Value Store</h3>
+          <p>
+            A Redis-like database engine in pure C++. Supports O(1) key retrieval
+            via unordered maps, mutex-based concurrency for safe multi-threaded
+            access, and persistent snapshot storage. Command handler and database
+            layers cleanly separated.
+          </p>
+          <div class="tags">
+            <span class="tag">C++</span>
+            <span class="tag">Concurrency</span>
+            <span class="tag">STL</span>
+            <span class="tag">Snapshots</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-memory"></i></div>
+            <a href="https://github.com/SamjithRaj/LRU-Cache" target="_blank" class="card-link" title="View on GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <h3>LRU Cache — Constant Time Eviction</h3>
+          <p>
+            O(1) LRU cache using a hash map paired with a doubly linked list.
+            Extended with thread-safe access via fine-grained locking — designed
+            to handle concurrent reads and writes without becoming a bottleneck.
+          </p>
+          <div class="tags">
+            <span class="tag">C++</span>
+            <span class="tag">Data Structures</span>
+            <span class="tag">Thread-Safe</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-seedling"></i></div>
+            <a href="https://github.com/SamjithRaj/HACK4SDG" target="_blank" class="card-link" title="View on GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <h3>The Giving Plate — Hack4SDG</h3>
+          <p>
+            Hackathon project tackling UN SDG Zero Hunger. A full-stack Flask
+            platform with Firebase auth and an AI matching algorithm that
+            connects food donors with nearby community recipients. 3-person team,
+            HTML/CSS/Python/PHP stack.
+          </p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Flask</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">AI Matching</span>
+            <span class="tag">REST</span>
+          </div>
+        </div>
+
+      </div>
     </div>
-</footer>
+  </section>
 
-<!-- Hidden Easter Egg -->
-<div id="terminal">
-    <p>> engineer_mode --activate</p>
-    <p>> systems_ready = true</p>
-    <p>> keep_building();</p>
-</div>
 
-<script src="script.js"></script>
+  <!-- ── GITHUB ───────────────────────────────────────────────── -->
+  <section id="github">
+    <div class="wrap">
+
+      <div class="section-header reveal">
+        <div class="section-tag">03 — Activity</div>
+        <h2>GitHub contributions</h2>
+      </div>
+
+      <div class="github-card reveal">
+        <div class="github-meta">
+          <i class="fab fa-github" style="font-size:1.1rem; color:var(--text2);"></i>
+          <a href="https://github.com/SamjithRaj" target="_blank">@SamjithRaj</a>
+          <span>— contribution heatmap</span>
+        </div>
+        <img src="https://ghchart.rshah.org/63b3ed/SamjithRaj" alt="GitHub contribution heatmap for SamjithRaj">
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ── FOOTER / CONTACT ─────────────────────────────────────── -->
+  <footer id="contact">
+    <div class="wrap">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <h3>Let's talk.</h3>
+          <a href="mailto:reachsamjith@gmail.com">reachsamjith@gmail.com</a>
+        </div>
+        <div class="footer-right">
+          <div class="footer-socials">
+            <a href="https://github.com/SamjithRaj" target="_blank" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/samjith-raj-bondla" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+          &copy; 2026 Samjith Raj Bondla<br>Built with intent.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ── TERMINAL EASTER EGG ──────────────────────────────────── -->
+  <!-- Toggle visibility with Ctrl+Shift+S -->
+  <div id="terminal">
+    <p>&gt; engineer_mode --activate</p>
+    <p>&gt; systems_ready = true</p>
+    <p>&gt; keep_building();</p>
+    <p>&gt; <span id="tcursor">_</span></p>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
