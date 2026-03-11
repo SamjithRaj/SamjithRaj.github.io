@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Samjith Raj Bondla | Systems Engineer</title>
-
   <link rel="icon" href="favicon.ico">
 
   <!-- Fonts -->
@@ -20,16 +19,28 @@
 </head>
 <body>
 
+  <!-- Page loader -->
+  <div id="loader">
+    <div class="loader-inner">
+      <span class="loader-logo">SRB<em>.</em></span>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- Cursor -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
   <!-- ── NAVBAR ──────────────────────────────────────────────── -->
-  <nav>
+  <nav id="navbar">
     <div class="nav-inner">
       <div class="logo">SRB<em>.</em></div>
       <div class="nav-right">
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#github">GitHub</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#github" class="nav-link">GitHub</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
         <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
           <i class="fas fa-sun sun-icon"></i>
@@ -42,43 +53,55 @@
 
   <!-- ── HERO ────────────────────────────────────────────────── -->
   <header class="hero">
+    <!-- Ambient glow blobs -->
+    <div class="glow-blob blob-1"></div>
+    <div class="glow-blob blob-2"></div>
+
     <div class="wrap">
       <div class="hero-grid">
 
         <div class="hero-left">
-          <div class="hero-eyebrow">
+          <div class="hero-eyebrow hero-reveal">
             <span class="dot-pulse"></span>
             Systems &nbsp;·&nbsp; Concurrency &nbsp;·&nbsp; Performance
           </div>
-          <h1 class="hero-name">Hi, I'm Samjith.</h1>
-          <div class="typing-wrap">
+
+          <h1 class="hero-name">
+            <span class="line-wrap hero-reveal" style="--d:.1s"><span class="line">Hi, I'm</span></span>
+            <span class="line-wrap hero-reveal" style="--d:.22s"><span class="line name-accent">Samjith.</span></span>
+          </h1>
+
+          <div class="typing-wrap hero-reveal" style="--d:.36s">
             <span id="typing-text"></span><span class="cursor"></span>
           </div>
-          <p class="hero-desc">
+
+          <p class="hero-desc hero-reveal" style="--d:.46s">
             I design systems that prioritize speed, correctness, and scale.
             Currently building a Redis-like in-memory database in C++ and
             experimenting with multi-threaded architectures.
           </p>
-          <div class="hero-actions">
-            <a href="Samjith-Resume-2026.pdf" target="_blank" class="btn-primary">
-              <i class="fas fa-download"></i> Resume
+
+          <div class="hero-actions hero-reveal" style="--d:.56s">
+            <a href="Samjith-Resume-2026.pdf" target="_blank" class="btn-primary magnetic">
+              <span class="btn-inner"><i class="fas fa-download"></i> Resume</span>
             </a>
-            <a href="https://github.com/SamjithRaj" target="_blank" class="btn-ghost">
-              <i class="fab fa-github"></i> GitHub
+            <a href="https://github.com/SamjithRaj" target="_blank" class="btn-ghost magnetic">
+              <span class="btn-inner"><i class="fab fa-github"></i> GitHub</span>
             </a>
             <div class="socials">
-              <a href="https://linkedin.com/in/samjith-raj-bondla" target="_blank" aria-label="LinkedIn">
+              <a href="https://linkedin.com/in/samjith-raj-bondla" target="_blank" aria-label="LinkedIn" class="social-icon">
                 <i class="fab fa-linkedin"></i>
               </a>
-              <a href="mailto:reachsamjith@gmail.com" aria-label="Email">
+              <a href="mailto:reachsamjith@gmail.com" aria-label="Email" class="social-icon">
                 <i class="fas fa-envelope"></i>
               </a>
             </div>
           </div>
         </div>
 
-        <div class="hero-photo">
-          <div class="photo-frame">
+        <div class="hero-photo hero-reveal" style="--d:.3s">
+          <div class="photo-frame" id="photoFrame">
+            <div class="photo-shine"></div>
             <img src="headshot.png" alt="Samjith Raj Bondla">
             <div class="photo-chip">
               Open to opportunities
@@ -89,20 +112,27 @@
 
       </div>
     </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
   </header>
 
 
   <!-- ── ABOUT ───────────────────────────────────────────────── -->
   <section id="about">
+    <div class="section-bg-accent"></div>
     <div class="wrap">
 
-      <div class="section-header reveal">
-        <div class="section-tag">01 — About</div>
-        <h2>A bit about me</h2>
+      <div class="section-header">
+        <div class="section-tag sr-fade">01 — About</div>
+        <h2 class="split-heading" data-text="A bit about me">A bit about me</h2>
       </div>
 
       <div class="about-grid">
-        <div class="about-text reveal">
+        <div class="about-text sr-fade" style="--sr-delay:.1s">
           <p>
             I enjoy working close to the fundamentals — <strong>memory models</strong>,
             synchronization primitives, and performance optimization. I prefer systems
@@ -119,7 +149,7 @@
           </p>
         </div>
 
-        <div class="skills-col reveal">
+        <div class="skills-col sr-fade" style="--sr-delay:.22s">
           <h4>Languages</h4>
           <div class="pill-row">
             <span class="pill">C++17</span>
@@ -127,7 +157,6 @@
             <span class="pill">SQL</span>
             <span class="pill">Bash</span>
           </div>
-
           <h4>Tools &amp; Concepts</h4>
           <div class="pill-row">
             <span class="pill">std::thread</span>
@@ -139,7 +168,6 @@
             <span class="pill">Git</span>
             <span class="pill">Docker</span>
           </div>
-
           <h4>Focus Areas</h4>
           <div class="pill-row">
             <span class="pill">Concurrency</span>
@@ -158,14 +186,15 @@
   <section id="projects">
     <div class="wrap">
 
-      <div class="section-header reveal">
-        <div class="section-tag">02 — Projects</div>
-        <h2>Things I've built</h2>
+      <div class="section-header">
+        <div class="section-tag sr-fade">02 — Projects</div>
+        <h2 class="split-heading">Things I've built</h2>
       </div>
 
       <div class="projects-grid">
 
-        <div class="project-card reveal">
+        <div class="project-card tilt-card sr-fade" style="--sr-delay:.05s">
+          <div class="card-glow"></div>
           <div class="card-top">
             <div class="card-icon"><i class="fas fa-database"></i></div>
             <a href="https://github.com/SamjithRaj/Mini-Redis" target="_blank" class="card-link" title="View on GitHub">
@@ -187,7 +216,8 @@
           </div>
         </div>
 
-        <div class="project-card reveal">
+        <div class="project-card tilt-card sr-fade" style="--sr-delay:.15s">
+          <div class="card-glow"></div>
           <div class="card-top">
             <div class="card-icon"><i class="fas fa-memory"></i></div>
             <a href="https://github.com/SamjithRaj/LRU-Cache" target="_blank" class="card-link" title="View on GitHub">
@@ -207,7 +237,8 @@
           </div>
         </div>
 
-        <div class="project-card reveal">
+        <div class="project-card tilt-card sr-fade" style="--sr-delay:.25s">
+          <div class="card-glow"></div>
           <div class="card-top">
             <div class="card-icon"><i class="fas fa-seedling"></i></div>
             <a href="https://github.com/SamjithRaj/HACK4SDG" target="_blank" class="card-link" title="View on GitHub">
@@ -239,12 +270,12 @@
   <section id="github">
     <div class="wrap">
 
-      <div class="section-header reveal">
-        <div class="section-tag">03 — Activity</div>
-        <h2>GitHub contributions</h2>
+      <div class="section-header">
+        <div class="section-tag sr-fade">03 — Activity</div>
+        <h2 class="split-heading">GitHub contributions</h2>
       </div>
 
-      <div class="github-card reveal">
+      <div class="github-card sr-fade" style="--sr-delay:.1s">
         <div class="github-meta">
           <i class="fab fa-github" style="font-size:1.1rem; color:var(--text2);"></i>
           <a href="https://github.com/SamjithRaj" target="_blank">@SamjithRaj</a>
@@ -259,30 +290,29 @@
 
   <!-- ── FOOTER / CONTACT ─────────────────────────────────────── -->
   <footer id="contact">
+    <div class="footer-glow"></div>
     <div class="wrap">
-      <div class="footer-inner">
+      <div class="footer-inner sr-fade">
         <div class="footer-left">
-          <h3>Let's talk.</h3>
-          <a href="mailto:reachsamjith@gmail.com">reachsamjith@gmail.com</a>
+          <p class="footer-cta">Let's talk.</p>
+          <a href="mailto:reachsamjith@gmail.com" class="footer-email">
+            reachsamjith@gmail.com
+            <span class="email-arrow">↗</span>
+          </a>
         </div>
         <div class="footer-right">
           <div class="footer-socials">
-            <a href="https://github.com/SamjithRaj" target="_blank" aria-label="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://linkedin.com/in/samjith-raj-bondla" target="_blank" aria-label="LinkedIn">
-              <i class="fab fa-linkedin"></i>
-            </a>
+            <a href="https://github.com/SamjithRaj" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/samjith-raj-bondla" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
           </div>
-          &copy; 2026 Samjith Raj Bondla<br>Built with intent.
+          <p>&copy; 2026 Samjith Raj Bondla</p>
+          <p>Built with intent.</p>
         </div>
       </div>
     </div>
   </footer>
 
-
-  <!-- ── TERMINAL EASTER EGG ──────────────────────────────────── -->
-  <!-- Toggle visibility with Ctrl+Shift+S -->
+  <!-- Easter Egg (Ctrl+Shift+S) -->
   <div id="terminal">
     <p>&gt; engineer_mode --activate</p>
     <p>&gt; systems_ready = true</p>
